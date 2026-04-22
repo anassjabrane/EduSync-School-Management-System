@@ -10,3 +10,11 @@ if(empty($lastname)||empty($firstname)||empty($email)||empty($password)){
     header("location:register.php");
     exit;
 }
+
+if (!filter_var($email,FILTER_VALIDATE_EMAIL)){
+    header("location:register.php");
+    exit ;
+}
+
+
+
