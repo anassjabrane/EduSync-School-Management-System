@@ -7,12 +7,12 @@ $password =($_POST['password']);
 
 
 if(empty($lastname)||empty($firstname)||empty($email)||empty($password)){
-    header("location:register.php");
+    header("location:register.php?error=empty");
     exit;
 }
 
 if (!filter_var($email,FILTER_VALIDATE_EMAIL)){
-    header("location:register.php");
+    header("location:register.php?error=empty");
     exit ;
 }
 
@@ -21,6 +21,9 @@ $firstname =htmlspecialchars($firstname);
 $password = htmlspecialchars($password);
 $email =htmlspecialchars($email);
 
+
+
+echo "Données valides ✔️";
 
 
 
