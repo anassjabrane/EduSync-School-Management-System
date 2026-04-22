@@ -1,9 +1,9 @@
 <?php 
 
-$lastname = htmlspecialchars($_POST['lastname']);
-$firstname =htmlspecialchars($_POST['firstname']);
-$email =htmlspecialchars($_POST['email']);
-$password =htmlspecialchars($_POST['password']);
+$lastname = ($_POST['lastname']);
+$firstname =($_POST['firstname']);
+$email =($_POST['email']);
+$password =($_POST['password']);
 
 
 if(empty($lastname)||empty($firstname)||empty($email)||empty($password)){
@@ -15,6 +15,13 @@ if (!filter_var($email,FILTER_VALIDATE_EMAIL)){
     header("location:register.php");
     exit ;
 }
+
+$lastname= htmlspecialchars($lastname);
+$firstname =htmlspecialchars($firstname);
+$password = htmlspecialchars($password);
+$email =htmlspecialchars($email);
+
+
 
 
 
