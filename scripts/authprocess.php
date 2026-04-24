@@ -1,5 +1,6 @@
 <?php 
 
+
 $lastname = ($_POST['lastname']);
 $firstname =($_POST['firstname']);
 $email =($_POST['email']);
@@ -26,25 +27,32 @@ $email =htmlspecialchars($email);
 echo "Données valides ✔️";
 
 
-$email=($_POST['email']);
-$password =($_POST['password']);
+///////////////////////////////////////////////
+
+// session_start();
+// if (empty($email) || empty($password)) {
+//     header("Location: ../public/login.php?error=empty");
+//     exit;
+// }
+
+// if ($email === "test@gmail.com" && $password === "123456") {
+
+//     $_SESSION["user"] = [
+//         "nom" => "test",
+//         "role" => "student"
+//     ];
+
+//     header("Location: ../public/dashboard.php");
+//     exit;
+
+// } else {
 
 
-if(empty($email)||empty($password)){
-    header("location:login.php");
-    exit;
-}
+//     header("Location: ../public/login.php?error=1");
+//     exit;
+// }
 
-if($email=== "anassjabrane12@gmail.com" && $password === "123456789"){
-   
-header("location:dashbord.php");
-exit ;
-}
 
-else{
-    header("location :login.php?error=1");
-    exit ;
-}
 
 
 
